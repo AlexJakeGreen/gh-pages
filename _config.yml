@@ -1,0 +1,28 @@
+title: blog.jee.org.ua
+description: "blog.jee.org.ua"
+author:
+  name: "ajg"
+  email: "alexander.jake.green@gmail.com"
+  url: "https://blog.jee.org.ua"
+
+baseurl: /
+
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 3
+paginate_path: /page/:num/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+future: true
+
+# Custom variables
+owner : "ajg"
+year : "2022"
