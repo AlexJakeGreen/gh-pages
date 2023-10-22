@@ -5,6 +5,7 @@ date:   2023-10-22
 categories: GNOME
 ---
 
+
 ~/bin/wallpaper.sh
 ```
 #!/bin/bash
@@ -13,6 +14,7 @@ find ~/Pictures/Wallpapers/ -type f \
      \( -iname '*.jpg' -o -iname "*.png" \) \
     | shuf -n 1
 ```
+
 
 ~/bin/gnome-wallpaper.sh
 ```
@@ -23,6 +25,7 @@ WALLPAPER="$(~/bin/wallpaper.sh)"
 gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER"
 gsettings set org.gnome.desktop.background picture-uri-dark "file://$WALLPAPER"
 ```
+
 
 ~/.config/autostart/set-wallpaper.desktop
 ```
