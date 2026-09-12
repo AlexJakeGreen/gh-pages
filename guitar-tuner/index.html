@@ -19,21 +19,30 @@
                 <img src="tuner_logo_ripple.svg">
                 <div>
                     <H1 style="font-size: 1.2em; margin: 0px;">Guitar Tuner</H1>
-                    <span style="font-size: 0.8em; color: #bbbbbc;">Online</span>
+                    <span style="font-size: 0.8em; color: #bbbbbc;" data-i18n="Online">Online</span>
                 </div>
             </div>
             <div class="right">
-                <!-- Theme
-                -->               <select>
-                    <option>EN</option>
-                    <option>UA</option>
+                <select id="langSelect">
+                    <option value="en">EN</option>
+                    <option value="ua">UA</option>
+                    <option value="de">DE</option>
+                    <option value="fr">FR</option>
+                    <option value="pl">PL</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
                 </select>
             </div>
         </div>
 
         <div class="main-container">
-            <div>
-                <div>Guitar Standard Tuning E A D G B E</div>
+            <div class="top-row">
+                <select id="tuningSelect" class="tuning-select"></select>
+                <div class="calib-row">
+                    <label for="calibSlider">A4</label>
+                    <input type="range" id="calibSlider" min="430" max="450" step="1" value="440">
+                    <span id="calibVal">440</span> Hz
+                </div>
             </div>
 
             <div id="gaugeWrap">
@@ -104,7 +113,7 @@
                         font-family="Inter, sans-serif"
                         fill="red"
                     >
-                        <tspan font-size="6" font-weight="600">TOO LOW</tspan>
+                        <tspan font-size="6" font-weight="600" data-i18n="TOO LOW">TOO LOW</tspan>
                     </text>
                     <text
                         id="too_high"
@@ -114,7 +123,7 @@
                         font-family="Inter, sans-serif"
                         fill="#70e070"
                     >
-                        <tspan font-size="6" font-weight="600">TOO HIGH</tspan>
+                        <tspan font-size="6" font-weight="600" data-i18n="TOO HIGH">TOO HIGH</tspan>
                     </text>
 
                 </svg>
@@ -158,7 +167,7 @@
             </div>
 
 
-            <div class="center" style="color: #bbbbbc; font-size: 0.8em;">
+            <div class="center" style="color: #bbbbbc; font-size: 0.8em;" data-i18n="💡 Play any string to start tuning">
                 💡 Play any string to start tuning
             </div>
             
@@ -166,11 +175,11 @@
         
         <div class="container">
             <div>
-                <h3>How to use</h3>
+                <h3 data-i18n="How to use">How to use</h3>
                 <ol class="green-list">
-                    <li>Allow microphone access</li>
-                    <li>Play a single string</li>
-                    <li>Tune until the indicator shows green and the note is stable in the center</li>
+                    <li data-i18n="Allow microphone access">Allow microphone access</li>
+                    <li data-i18n="Play a single string">Play a single string</li>
+                    <li data-i18n="Tune until the indicator shows green and the note is stable in the center">Tune until the indicator shows green and the note is stable in the center</li>
                 </ol>
             </div>
 
@@ -190,28 +199,28 @@
 
                 
                 <span id="statusTxt" style="margin-top: 20px;font-size: 1.2em; color: #73d24d;">Press start to tune</span>
-                <span style="margin-top: 20px;font-size: 0.8em; color: #bbbbbc;">🔒 We do not store or record your audio</span>
+                <span style="margin-top: 20px;font-size: 0.8em; color: #bbbbbc;" data-i18n="🔒 We do not store or record your audio">🔒 We do not store or record your audio</span>
             </div>
             <div>
-                <h3>Tuning tips</h3>
+                <h3 data-i18n="Tuning tips">Tuning tips</h3>
                 <ul class="green-list2">
-                    <li>Pluck one string at a time</li>
-                    <li>Avoid background noise</li>
-                    <li>Tune in a quiet environment</li>
-                    <li>♫ A4 (440 Hz) standard pitch</li>
+                    <li data-i18n="Pluck one string at a time">Pluck one string at a time</li>
+                    <li data-i18n="Avoid background noise">Avoid background noise</li>
+                    <li data-i18n="Tune in a quiet environment">Tune in a quiet environment</li>
+                    <li data-i18n="♫ A4 (440 Hz) standard pitch">♫ A4 (440 Hz) standard pitch</li>
                 </ul>
             </div>
         </div>
 
         <footer>
-            <div>© 2026 Guitar Tuner Online. All rights reserved</div>
+            <div data-i18n="© 2026 Guitar Tuner Online. All rights reserved">© 2026 Guitar Tuner Online. All rights reserved</div>
             <div>
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Use</a>
-                <a href="/contact">Contact</a>
+                <a href="/privacy" data-i18n="Privacy Policy">Privacy Policy</a>
+                <a href="/terms" data-i18n="Terms of Use">Terms of Use</a>
+                <a href="/contact" data-i18n="Contact">Contact</a>
             </div>
             <div>
-                <a href="#" onclick="shareApp()">Share</a>
+                <a href="#" onclick="shareApp()" data-i18n="Share">Share</a>
             </div>
         </footer>
 

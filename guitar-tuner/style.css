@@ -1,6 +1,7 @@
 * {
     color: #fdfbfd;
     font-family: Inter, sans-serif;
+    box-sizing: border-box;
 }
 
 .center {
@@ -22,8 +23,9 @@
 }
 
 .strings-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
@@ -33,6 +35,9 @@
     border: 1px solid #1e222c;
     border-radius: 10px;
     padding: 10px;
+    flex: 1 1 0;
+    min-width: 72px;
+    max-width: 160px;
 }
 
 .container div {
@@ -154,6 +159,33 @@ select {
     cursor: pointer;
 }
 
+.tuning-select {
+    font-size: 1em;
+    padding: 0;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.calib-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8em;
+    color: #bbbbbc;
+    white-space: nowrap;
+}
+
+.calib-row input[type="range"] {
+    width: 100px;
+    accent-color: #5db445;
+}
+
 .string-btn {
     cursor: pointer;
 }
@@ -264,21 +296,44 @@ select {
 
 
 footer {
-    font-size: 0.65em;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 12px 24px;
     font-size: 0.8em;
     color: #bbbbbc;
+    text-align: center;
 }
 
 footer div {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 footer div a {
     color: #bbbbbc;
     text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .main-container {
+        margin: 0 8px;
+    }
+
+    .container div {
+        margin: 6px 0;
+    }
 }
